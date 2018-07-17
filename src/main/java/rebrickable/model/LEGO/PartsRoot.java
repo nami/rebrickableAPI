@@ -1,18 +1,12 @@
 package rebrickable.model.LEGO;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+public class PartsRoot {
 
-// if it's not in your class, it will not map it
-@JsonIgnoreProperties(ignoreUnknown = true)
-// thie class is generic as there will be several API calls that will change results
-public class LEGORoot<T> {
-
-    // root variables of the API page
+    // root variables for lego sets
     int count;
     String next;
     String previous;
-    // results is generic to allow API calls to reuse LEGORoot
-    ThemesResults[] results;
+    PartsResults[] results;
 
     // getters & setters
     public int getCount() {
@@ -39,11 +33,11 @@ public class LEGORoot<T> {
         this.previous = previous;
     }
 
-    public ThemesResults[] getResults() {
+    public PartsResults[] getResults() {
         return results;
     }
 
-    public void setResults(ThemesResults[] results) {
+    public void setResults(PartsResults[] results) {
         this.results = results;
     }
 }

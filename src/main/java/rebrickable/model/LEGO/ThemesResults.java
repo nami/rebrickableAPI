@@ -3,7 +3,6 @@ package rebrickable.model.LEGO;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 // if it's not in your class, it will not map it
-
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ThemesResults {
 
