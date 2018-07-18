@@ -6,7 +6,7 @@ public class User {
     int id;
     String last_name;
     String first_name;
-    String API_Key;
+    String api_key;
 
     // getters & setters
     public int getId() {
@@ -33,11 +33,11 @@ public class User {
         this.first_name = first_name;
     }
 
-    public String getAPI_Key() {
-        return API_Key;
+    public String getApi_key() {
+        return api_key;
     }
 
-    public void setAPI_Key(String API_Key) {
-        this.API_Key = API_Key;
+    public void setApi_key(String api_key) {
+        this.api_key = api_key;
     }
 }

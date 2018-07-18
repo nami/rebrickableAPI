@@ -14,6 +14,7 @@ public class LEGOController {
     @Autowired
     LEGOService service;
 
+    // get lego themes
     @RequestMapping("/themes")
     // takes request param, query command (?)
     public ThemesRoot legoThemes(
@@ -25,6 +26,7 @@ public class LEGOController {
         return response;
     }
 
+    // get lego sets
     @RequestMapping("/sets")
     // takes request param, query command (?)
     public SetsRoot legoSets(
@@ -36,6 +38,7 @@ public class LEGOController {
         return response;
     }
 
+    // get & search lego parts
     @RequestMapping("/parts")
     // takes request param, query command (?)
     public PartsRoot searchParts(
@@ -48,6 +51,7 @@ public class LEGOController {
         return response;
     }
 
+    // get user token
     @RequestMapping("/getToken")
     public ResponseEntity<UserToken> getToken(
             @RequestParam("token") String key)
@@ -58,6 +62,7 @@ public class LEGOController {
         return response;
     }
 
+    // add a set to my set list
     @RequestMapping("/addset")
     public MySetsRoot addSet(){
         // returns whatever response returns
@@ -66,6 +71,7 @@ public class LEGOController {
         return response;
     }
 
+    // get a list of mysets
     @RequestMapping("/mysets")
     public MySetsRoot getMySets(){
 
@@ -75,6 +81,7 @@ public class LEGOController {
         return response;
     }
 
+    // update a set in my list
     @RequestMapping("/updateset")
     public MySetsRoot updateSet(){
 

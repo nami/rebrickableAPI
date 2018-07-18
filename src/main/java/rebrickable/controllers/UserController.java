@@ -19,7 +19,7 @@ public class UserController {
     @Autowired
     SecurityService securityService;
 
-    // Create parts
+    // Create user
     @PostMapping
     public User addUser(@RequestBody User user) throws NoSuchAlgorithmException {
 

@@ -22,7 +22,7 @@ public class UserService {
         //　create API Key
         String apiKey = securityService.createApiKey();
         // set API key
-        user.setAPI_Key(apiKey);
+        user.setApi_key(apiKey);
         // call SQL query to to insert into
         userMapper.addUser(user);
         // return user by API key

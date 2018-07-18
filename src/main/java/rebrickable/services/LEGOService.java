@@ -19,8 +19,8 @@ public class LEGOService {
     LEGOMapper mapper;
 
     // put API key & USER_TOKEN in for easy access
-    private final String API_KEY = "***+";
-    private final String USER_TOKEN = "****";
+    private final String API_KEY = "******";
+    private final String USER_TOKEN = "*****";
 
     // search Rebrickable for themes and map it to persist results
     public ThemesRoot getLegoThemes(String persist) {
