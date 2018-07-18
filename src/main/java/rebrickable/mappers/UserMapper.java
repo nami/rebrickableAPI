@@ -13,7 +13,7 @@ public interface UserMapper {
 
     String SELECT_USER_BY_API_KEY = "SELECT FROM `Users`.`users` where API_key = #{api_key}";
 
-    // 
+    //
     @Insert(INSERT_USER)
     void addUser(User users);
 
