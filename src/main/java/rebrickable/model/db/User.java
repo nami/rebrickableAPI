@@ -1,6 +1,6 @@
 package rebrickable.model.db;
 
-public class Users {
+public class User {
 
     // User variables for the DB
     int id;

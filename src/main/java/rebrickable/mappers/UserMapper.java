@@ -1,12 +1,20 @@
 package rebrickable.mappers;
 
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
-import rebrickable.model.db.Users;
+import rebrickable.model.db.User;
 
 @Mapper
 public interface UserMapper {
 
-    String INSERT_USER = " ";
+    String INSERT_USER = "INSERT INTO `User`.`users` (`last_name`, `first_name`, `API_key`) " +
+            "VALUES (#{last_name}, #{first_name}, #{API_key})";
 
-    void addUser(Users users);
+    String SELECT_USER_BY_API_KEY = "SELECT FROM `Users`.`users` where API_key = #{api_key}";
+
+    @Insert(INSERT_USER)
+    void addUser(User users);
+
+    @Insert(SELECT_USER_BY_API_KEY)
+    User getUserByApiKey(String apiKey);
 }
