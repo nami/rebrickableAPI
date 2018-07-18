@@ -26,12 +26,3 @@ public class UserController {
         return userService.newUser(user);
     }
 }
-
-//    throws InvalidAPIKeyException {
-//     @RequestParam(api-key)String apikey
-//
-//        if (securityService.authenticate(apiKey)) {
-//            return userService.newUser(apiKey);
-//        } else {
-//            throw new InvalidAPIKeyException("No API Key found.");
-

@@ -20,7 +20,7 @@ public class LEGOService {
 
     // put API key & USER_TOKEN in for easy access
     private final String API_KEY = "******";
-    private final String USER_TOKEN = "*****";
+    private final String USER_TOKEN = "***";
 
     // search Rebrickable for themes and map it to persist results
     public ThemesRoot getLegoThemes(String persist) {
@@ -115,7 +115,7 @@ public class LEGOService {
     }
 
     // POST method to get a user token
-    public ResponseEntity<UserToken> getToken(String key) {
+    public ResponseEntity<UserToken> getToken() {
 
         // create url of API request
         String url = "https://rebrickable.com/api/v3/users/_token/";
