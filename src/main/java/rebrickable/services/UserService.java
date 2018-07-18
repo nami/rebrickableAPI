@@ -19,9 +19,13 @@ public class UserService {
     // add user to the db
     public User newUser(User user) throws NoSuchAlgorithmException {
 
+        //　create API Key
         String apiKey = securityService.createApiKey();
+        // set API key
         user.setAPI_Key(apiKey);
+        // call SQL query to to insert into
         userMapper.addUser(user);
+        // return user by API key
         return userMapper.getUserByApiKey(apiKey);
     }
 }
