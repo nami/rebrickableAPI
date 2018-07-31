@@ -19,8 +19,8 @@ public class LEGOService {
     LEGOMapper mapper;
 
     // put API key & USER_TOKEN in for easy access
-    private final String API_KEY = "******";
-    private final String USER_TOKEN = "***";
+    private final String API_KEY = "d132d542ea1889b0454c8444576dff81";
+    private final String USER_TOKEN = "6a57a4a1125ccb952227be9f3d05e96ce876e7c396e503b727199a186847e57b";
 
     // search Rebrickable for themes and map it to persist results
     public ThemesRoot getLegoThemes(String persist) {
@@ -127,8 +127,8 @@ public class LEGOService {
 
         // content body (username & password)
         MultiValueMap<String, String> map = new LinkedMultiValueMap<String, String>();
-        map.add("username", "****");
-        map.add("password", "****");
+        map.add("username", "pomlego");
+        map.add("password", "trisana28");
 
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<MultiValueMap<String, String>>(map, headers);
 

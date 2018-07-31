@@ -24,60 +24,61 @@ public class DBPartsController {
 
     // Get
     @GetMapping
-    public ArrayList<Parts> getParts(
-            @RequestParam("api-key") String apikey) throws InvalidAPIKeyException {
-        if (securityService.authenticate(apikey)) {
+    public ArrayList<Parts> getParts()
+//            @RequestParam("api-key") String apikey) throws InvalidAPIKeyException {
+//        if (securityService.authenticate(apikey))
+        {
             return partsService.getAllParts();
-        } else {
-            throw new InvalidAPIKeyException("Your API key is not valid");
-        }
+//        } else {
+//            throw new InvalidAPIKeyException("Your API key is not valid");
+//        }
     }
 
     // get parts by part id
     @GetMapping("/{part_num}")
     public Parts getPartId(
-            @PathVariable(value = "part_num") String part_num,
-            @RequestParam("api-key") String apikey) throws InvalidAPIKeyException {
-        if (securityService.authenticate(apikey)) {
+            @PathVariable(value = "part_num") String part_num) {
+//            @RequestParam("api-key") String apikey) throws InvalidAPIKeyException {
+//        if (securityService.authenticate(apikey)) {
             return partsService.getPartNum(part_num);
-        } else {
-            throw new InvalidAPIKeyException("Your API key is not valid");
-        }
+//        } else {
+//            throw new InvalidAPIKeyException("Your API key is not valid");
+//        }
     }
 
     // Create parts
     @PostMapping
     public Parts addNew(
-            @RequestBody Parts parts,
-            @RequestParam("api-key") String apikey) throws InvalidAPIKeyException {
-        if (securityService.authenticate(apikey)) {
+            @RequestBody Parts parts) {
+//            @RequestParam("api-key") String apikey) throws InvalidAPIKeyException {
+//        if (securityService.authenticate(apikey)) {
             return partsService.addNew(parts);
-        } else {
-            throw new InvalidAPIKeyException("Your API key is not valid");
-        }
+//        } else {
+//            throw new InvalidAPIKeyException("Your API key is not valid");
+//        }
     }
 
     // Update parts
     @PutMapping
     public Parts updatebyPart_num(
-            @RequestBody Parts parts,
-            @RequestParam("api-key") String apikey) throws InvalidAPIKeyException {
-        if (securityService.authenticate(apikey)) {
+            @RequestBody Parts parts){
+//            @RequestParam("api-key") String apikey) throws InvalidAPIKeyException {
+//        if (securityService.authenticate(apikey)) {
             return partsService.updatebyPart_num(parts);
-        } else {
-            throw new InvalidAPIKeyException("Your API key is not valid");
-        }
+//        } else {
+//            throw new InvalidAPIKeyException("Your API key is not valid");
+//        }
     }
 
     // Delete parts
     @DeleteMapping
     public Parts deletebyPartNum(
-            @RequestParam(value = "part_num") String part_num,
-            @RequestParam("api-key") String apikey) throws InvalidAPIKeyException {
-        if (securityService.authenticate(apikey)) {
+            @RequestParam(value = "part_num") String part_num){
+//            @RequestParam("api-key") String apikey) throws InvalidAPIKeyException {
+//        if (securityService.authenticate(apikey)) {
             return partsService.deletebyPartnum(part_num);
-        } else {
-            throw new InvalidAPIKeyException("Your API key is not valid");
-        }
+//        } else {
+//            throw new InvalidAPIKeyException("Your API key is not valid");
+//        }
     }
 }

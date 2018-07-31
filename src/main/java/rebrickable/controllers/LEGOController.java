@@ -40,17 +40,12 @@ public class LEGOController {
     @RequestMapping("/sets")
     // takes request param, query command (?)
     public SetsRoot legoSets(
-            @RequestParam("api-key") String apikey,
-            @RequestParam("persist") String persist) throws InvalidAPIKeyException {
+           @RequestParam("persist") String persist) throws InvalidAPIKeyException {
 
-        if (securityService.authenticate(apikey)) {
             // returns whatever response returns
             SetsRoot response = service.getLegoSets(persist);
 
             return response;
-        } else {
-            throw new InvalidAPIKeyException("Your API key is invalid");
-        }
     }
 
     // get & search lego parts
