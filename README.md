@@ -7,7 +7,7 @@ This project demonstrates how to implement the rebrickable API (a LEGO library/d
 
 ## Getting Started
 
-Kraken requires a [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  to be
+This repo requires a [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  to be
 installed on the machine you are going to use to run the program.
 
 
