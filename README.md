@@ -19,7 +19,7 @@ Required:
 #### SQL Connection
 * As stated in the description, this repo allows users to create a table called PartsResults to add LEGO parts to the database or perpetuate these parts from rebrickable.
 * Users of this repo can also add a table LEGO sets or LEGO themes to their database (SetsResults/ThemesResults)
-* Users are advised to create these empty tables with the appropriate names beforehand. The column names and descriptions are found in the [`mappers`] folder (https://github.com/pomlego/rebrickableAPI/tree/master/src/main/java/rebrickable/mappers)
+* Users are advised to create these empty tables with the appropriate names beforehand. The column names and descriptions are found in the [mappers](https://github.com/pomlego/rebrickableAPI/tree/master/src/main/java/rebrickable/mappers) folder.
 
 #### API Security
 Users of this repo also have the option of having this project only accessible when authenticated through a users' API Key. For this, you must create a User schema and users table in your local database and add this (or remove the //) to your controllers
