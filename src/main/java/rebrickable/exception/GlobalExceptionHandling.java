@@ -3,7 +3,7 @@ package rebrickable.exception;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
-import rebrickable.model.ExceptionPojo;
+
 import javax.servlet.http.HttpServletRequest;
 
 @ControllerAdvice

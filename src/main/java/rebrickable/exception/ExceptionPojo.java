@@ -1,4 +1,4 @@
-package rebrickable.model;
+package rebrickable.exception;
 
 public class ExceptionPojo {
 
