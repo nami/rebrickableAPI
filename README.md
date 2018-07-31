@@ -47,7 +47,7 @@ protected SpringApplicationBuilder configure (SpringApplicationBuilder applicati
         return application.sources(Application.class);
     }
 ```
-* Add this dependency to your pom.xml file:
+* Add this dependency to your [pom.xml](https://github.com/pomlego/rebrickableAPI/blob/master/pom.xml) file:
 ```
 <dependency>
             <groupId>org.springframework.boot</groupId>
