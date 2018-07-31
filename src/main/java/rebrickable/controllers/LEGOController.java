@@ -23,104 +23,109 @@ public class LEGOController {
     @RequestMapping("/themes")
     // takes request param, query command (?)
     public ThemesRoot legoThemes(
-            @RequestParam("api-key") String apikey,
+//            @RequestParam("api-key") String apikey,
             @RequestParam("persist") String persist) throws InvalidAPIKeyException {
 
         // returns whatever LEGO API response returns
-        if (securityService.authenticate(apikey)) {
-            ThemesRoot response = service.getLegoThemes(persist);
+//        if (securityService.authenticate(apikey)) {
+        ThemesRoot response = service.getLegoThemes(persist);
 
-            return response;
-        } else {
-            throw new InvalidAPIKeyException("You API key is invalid");
-        }
+        return response;
+//        } else {
+//            throw new InvalidAPIKeyException("You API key is invalid");
+//        }
     }
 
     // get lego sets
     @RequestMapping("/sets")
     // takes request param, query command (?)
     public SetsRoot legoSets(
-           @RequestParam("persist") String persist) throws InvalidAPIKeyException {
+//            @RequestParam("api-key") String apikey,
+            @RequestParam("persist") String persist) throws InvalidAPIKeyException {
 
+//        if (securityService.authenticate(apikey)) {
             // returns whatever response returns
             SetsRoot response = service.getLegoSets(persist);
 
             return response;
+//        } else {
+//            throw new InvalidAPIKeyException("Your API key is invalid");
+//        }
     }
 
     // get & search lego parts
     @RequestMapping("/parts")
     // takes request param, query command (?)
     public PartsRoot searchParts(
-            @RequestParam("api-key") String apikey,
+//            @RequestParam("api-key") String apikey,
             @RequestParam("keyword") String keyword,
             @RequestParam("persist") String persist) throws InvalidAPIKeyException {
 
-        if (securityService.authenticate(apikey)) {
+//        if (securityService.authenticate(apikey)) {
             // returns whatever LEGO API response returns
             PartsRoot response = service.searchParts(keyword, persist);
 
             return response;
-        } else {
-            throw new InvalidAPIKeyException("Your API key is invalid");
-        }
+//        } else {
+//            throw new InvalidAPIKeyException("Your API key is invalid");
+//        }
     }
 
     // get user token
     @RequestMapping("/getToken")
-    public ResponseEntity<UserToken> getToken(
-            @RequestParam("api-key") String apikey) throws InvalidAPIKeyException {
-        if (securityService.authenticate(apikey)) {
+    public ResponseEntity<UserToken> getToken(){
+//            @RequestParam("api-key") String apikey) throws InvalidAPIKeyException {
+//        if (securityService.authenticate(apikey)) {
             // get user token
             ResponseEntity<UserToken> response = service.getToken();
 
             return response;
-        } else {
-            throw new InvalidAPIKeyException("Your API key is invalid");
-        }
+//        } else {
+//            throw new InvalidAPIKeyException("Your API key is invalid");
+//        }
     }
 
     // add a set to my set list
     @RequestMapping("/addset")
-    public MySetsRoot addSet(
-            @RequestParam("api-key") String apikey) throws InvalidAPIKeyException {
+    public MySetsRoot addSet(){
+//            @RequestParam("api-key") String apikey) throws InvalidAPIKeyException {
         // returns whatever response returns
-        if (securityService.authenticate(apikey)) {
+//        if (securityService.authenticate(apikey)) {
             MySetsRoot response = service.addSet();
 
             return response;
-        } else {
-            throw new InvalidAPIKeyException("Your API key is invalid");
-        }
+//        } else {
+//            throw new InvalidAPIKeyException("Your API key is invalid");
+//        }
     }
 
     // get a list of mysets
     @RequestMapping("/mysets")
-    public MySetsRoot getMySets(
-            @RequestParam("api-key") String apikey) throws InvalidAPIKeyException {
-
-        if (securityService.authenticate(apikey)) {
+    public MySetsRoot getMySets(){
+//            @RequestParam("api-key") String apikey) throws InvalidAPIKeyException {
+//
+//        if (securityService.authenticate(apikey)) {
             // returns whatever response returns
             MySetsRoot response = service.getMySets();
 
             return response;
-        } else {
-            throw new InvalidAPIKeyException("Your API key is invalid");
-        }
+//        } else {
+//            throw new InvalidAPIKeyException("Your API key is invalid");
+//        }
     }
 
     // update a set in my list
     @RequestMapping("/updateset")
-    public MySetsRoot updateSet(
-            @RequestParam("api-key") String apikey) throws InvalidAPIKeyException {
+    public MySetsRoot updateSet(){
+//            @RequestParam("api-key") String apikey) throws InvalidAPIKeyException {
 
-        if (securityService.authenticate(apikey)) {
+//        if (securityService.authenticate(apikey)) {
             // returns whatever response returns
             MySetsRoot response = service.updateSet();
 
             return response;
-        } else {
-            throw new InvalidAPIKeyException("Your API key is invalid");
-        }
+//        } else {
+//            throw new InvalidAPIKeyException("Your API key is invalid");
+//        }
     }
 }
