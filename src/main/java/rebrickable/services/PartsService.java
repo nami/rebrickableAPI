@@ -45,7 +45,8 @@ public class PartsService {
     }
 
     // add new part
-    @CachePut(value = "parts", key = "#part_num")
+    //@CachePut(value = "parts")
+    @CacheEvict(value = "parts", allEntries = true)
     public Parts addNew(Parts parts){
         System.out.println("Creating part");
         partsMapper.insertPart(parts);
@@ -53,7 +54,7 @@ public class PartsService {
     }
 
     // update by part num
-    @CacheEvict(value = "parts", key = "#part_num" )
+    @CacheEvict(value = "parts", allEntries = true)
     public Parts updatebyPart_num(Parts parts) {
         partsMapper.updatePartNum(parts);
         return partsMapper.getPartNum(parts.getPart_num());

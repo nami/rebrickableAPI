@@ -81,4 +81,10 @@ public class DBPartsController {
 //            throw new InvalidAPIKeyException("Your API key is not valid");
 //        }
     }
+
+    // class level exception handler
+    @ExceptionHandler(Exception.class)
+    public void handleError(){
+        System.out.println("Part not found.");
+    }
 }
