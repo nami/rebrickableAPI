@@ -16,15 +16,16 @@ Required:
 * [Maven](http://maven.apache.org/download.cgi)
 
 ## Functionality
-###SQL Connection
+### SQL Connection
 * As stated in the description, this repo allows users to create a table called PartsResults to add LEGO parts to the database or perpetuate these parts from rebrickable.
 * Users of this repo can also add a table LEGO sets or LEGO themes to their database (SetsResults/ThemesResults)
 * Users are advised to create these empty tables with the appropriate names beforehand. The column names and descriptions are found in the [`mappers`] folder (https://github.com/pomlego/rebrickableAPI/tree/master/src/main/java/rebrickable/mappers)
 
-###API Security
+### API Security
 Users of this repo also have the option of having this project only accessible when authenticated through a users' API Key. For this, you must create a User schema and users table in your local database and add this (or remove the //) to your controllers
 
-```@Annotation
+```
+@Annotation
     public ReturnType MethodName(
             @RequestParam("api-key") String apikey) throws InvalidAPIKeyException {
 
@@ -35,10 +36,11 @@ Users of this repo also have the option of having this project only accessible w
         } else {
             throw new InvalidAPIKeyException("Your API key is invalid");
             }
-    }```
+    }
+```
     
-###Caching
+### Caching
 Still a work in progress
 
-###Exception Handling
+### Exception Handling
 Still a work in progress
