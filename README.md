@@ -7,7 +7,7 @@ This project demonstrates how to implement the rebrickable API (a LEGO library/d
 
 ## Getting Started
 
-Kraken requires a [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  to be
+This repo requires a [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  to be
 installed on the machine you are going to use to run the program.
 
 
@@ -37,7 +37,25 @@ Users of this repo also have the option of having this project only accessible w
             }
     }
 ```
-    
+#### RDS/EC2
+This repo can also be deployed to AWS.
+* Add your RDS connection to the [application.properties](https://github.com/pomlego/rebrickableAPI/blob/master/src/main/resources/application.properties) under spring.datasource
+* Add to your class ```extends SpringBootServletInitializer``` and this method:
+```
+@Override
+protected SpringApplicationBuilder configure (SpringApplicationBuilder application){
+        return application.sources(Application.class);
+    }
+```
+* Add this dependency to your [pom.xml](https://github.com/pomlego/rebrickableAPI/blob/master/pom.xml) file:
+```
+<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+```
+
 #### Caching
 Still a work in progress
 
