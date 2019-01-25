@@ -1,7 +1,5 @@
 # rebrickable API implementation
 
-### This repo is built as part of a project of a coding bootcamp (CodingNomads)
-
 ## Description
 This project demonstrates how to implement the rebrickable API (a LEGO library/database) so that LEGO fans can easily use make calls to create LEGO lists or search for existing LEGO parts and sets. Useful for any fan who needs to keep track of needed parts for an MOC, or who wants to create a curated lists of LEGO sets. Users of this repo can also connect this to their SQL database to add LEGO parts.
 
